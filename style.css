@@ -1,0 +1,166 @@
+html {
+    box-sizing: border-box;
+}
+
+
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+.container {
+    max-width: 1024px;
+    margin: auto;
+    box-shadow: 1px 0 5px grey;
+}
+
+.container--text {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*---HEADER---*/
+
+/*---header top---*/
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-image: linear-gradient(to right, rgba(188, 211, 204, 0), rgba(188, 211, 204, 1));
+}
+
+.header-top__logo--modification {
+    height: 70px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-basis: 50%
+}
+
+.nav--text {
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.nav__items {
+    list-style: none;
+}
+
+
+/*---header middle---*/ 
+
+.header-middle {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.header-middle-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 70%;
+}
+
+.header-middle-me__name--text {
+    font-size: 2.5rem;
+}
+
+.header-midlle-me__job--text {
+    font-size: 2rem;
+    font-style: italic;
+    margin: 0;
+}
+
+.header-middle__portrait {
+    padding-top: 3rem;
+    padding-right: 5rem;
+}
+
+.header-middle__portrait--modification {
+    height: 400px;
+}
+
+/*---header bottom---*/
+
+.header-bottom {
+    display: flex;
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.header-bottom__contact-icons {
+    padding: 0.5rem;
+}
+
+.header-bottom__contact-icons--modification {
+    height: 50px;
+}
+
+/*---HEADING---*/
+
+.introduction__heading,
+.portfolio__heading,
+.contact__heading {
+    padding: 1rem 2rem;
+    background-image: linear-gradient(to right, rgba(188, 211, 204, 0), rgba(188, 211, 204, 1));
+    text-align: center;
+
+}
+
+.introduction_heading--text,
+.portfolio_heading--text,
+.contact_heading--text  {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/*---INTRODUCTION---*/
+
+
+.introduction__description {
+    padding: 1rem;
+    text-align: center;
+}
+
+.introduction__description--text {
+    font-size: 1rem;
+}
+
+/*---PORTFOLIO---*/
+
+
+/*---CONTACT---*/
+
+
+.contact__heading {
+    padding: 1rem 2rem;
+    background-image: linear-gradient(to right, rgba(188, 211, 204, 0), rgba(188, 211, 204, 1));
+    text-align: center;
+
+}
+
+.contact_heading--text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.contact-info {
+    padding: 1rem;
+}
+
+.contact__address {
+    text-align: center;
+    margin: 0;
+}
+.contact__address--text {
+    line-height: 2rem;
+    font-style: italic;
+    
+}
