@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>První úkol</title>
+    <title>Portfolio Bara Szarowska</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -18,70 +18,141 @@
     <div class="container container--text">
 
         <!---HEADER-->
+
+
         <header>
+            <img src="pictures/logo_bez_pozadi.png" alt="logo Bara Szarowska" class="header__logo--modification">
 
-            <div class="header-top">
-                <!---U loga vim, ze je to spatne nastylovano, chci si ho vyladit pozdeji-->
-                <img src="pictures/logo_bila-removebg-preview.png" alt="logo Bara Szarowska" class="header-top__logo--modification">
-
-                <nav class="nav nav--text">
-                    <li class="nav__items">Portfolio</li>
-                    <li class="nav__items">O mě</li>
-                    <li class="nav__items">Kontakt</li>
-                </nav>
-
-            </div>
-            <div class="header-middle">
-                <span class="header-middle-me">
-
-                    <!--Tady si nejsem jista, jestli jsem se do toho moc nezamotala :) Muze byt header-middle-me blok? Nebo uz by to mel byt element od header-middle?  Děkuji -->
-
-                    <h1 class="header-middle-me__name--text">Bára Szarowská</h1>
-                    <p class="header-midlle-me__job--text">- Kóderka -</p>
-                </span>
-
-                <img src="pictures/me_color_2.jpg" alt="Portret Bara Szarowska" class="header-middle__portrait header-middle__portrait--modification">
-                </span>
-            </div>
-
-            <ul class="header-bottom">
-                <li class="header-bottom__contact-icons">
-                    <img src="pictures/mail.jpg" alt="odkaz_email" class="header-bottom__contact-icons--modification ">
-                </li>
-                <li class="header-bottom__contact-icons">
-                    <img src="pictures/linkedin.jpg" alt="odkaz_linkedin" class="header-bottom__contact-icons--modification ">
-                </li>
-                <li class="header-bottom__contact-icons">
-                    <img src="pictures/fb.jpg" alt="odkaz_facebook" class="header-bottom__contact-icons--modification ">
-                </li>
-            </ul>
-
+            <nav class="nav nav--text">
+                <li class="nav__items">Portfolio</li>
+                <li class="nav__items">O mě</li>
+                <li class="nav__items">Kontakt</li>
+            </nav>
         </header>
 
-        <!---INTRODUCTION-->
+
+        <!---MAIN INFORMATION--->
 
         <div class="introduction">
-            <h2 class="introduction__heading introduction_heading--text">O MĚ</h2>
-            <p class="introduction__description introduction__description--text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero modi sequi debitis beatae temporibus maiores nihil rerum delectus incidunt totam provident ipsam laborum, ipsa illo qui numquam quis, officiis iusto.</p>
+            <div class="introduction-me">
+                <h1 class="introduction-me__name--text">Bára Szarowská</h1>
+                <span class="introduction-me__job--text">- Kóderka -</span>
+            </div>
+
+            <img src="https://picsum.photos/200/200" alt="Portret Bara Szarowska" class="introduction__portrait introduction__portrait--modification">
         </div>
+
+        <ul class="contact-icons">
+            <li class="contact-icons__button">
+                <img src="pictures/mail.jpg" alt="odkaz_email" class="contact-icons__button--modification">
+            </li>
+
+            <li class="contact-icons__button">
+                <img src="pictures/linkedin.jpg" alt="odkaz_linkedin" class="contact-icons__button--modification">
+
+            </li>
+            <li class="contact-icons__button">
+                <img src="pictures/fb.jpg" alt="odkaz_facebook" class="contact-icons__button--modification">
+            </li>
+        </ul>
+
+
+
+        <!---ABOUT ME-->
+
+
+
+        <section>
+            <h2 class="section_heading section_heading--text">O MĚ</h2>
+            <div class="about-me">
+
+                <p class="about-me__description about-me__description--text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero modi sequi debitis beatae temporibus maiores nihil rerum delectus incidunt totam provident ipsam laborum, ipsa illo qui numquam quis, officiis iusto.</p>
+
+                <div class="about-me-timeline">
+                    <div class="about-me-timeline-point">
+                        <div class="about-me-timeline-point-description">
+                            <span class="about-me-timeline-point-description__year about-me-timeline-point-description__year--text">2015</span>
+                            <p class="about-me-timeline-point_info about-me-timeline-point-description__info--text">Ukončení studia v Brně</p>
+                        </div>
+
+                        <img src="https://picsum.photos/100">
+                    </div>
+
+                    <div class="about-me-timeline-point">
+                        <div class="about-me-timeline-point-description">
+                            <span class="about-me-timeline-point-description__year about-me-timeline-point-description__year--text">2016</span>
+                            <p class="about-me-timeline-point-description__info about-me-timeline-point-description__info--text">Stáž na Institut Karolinska</p>
+                        </div>
+
+                        <img src="https://picsum.photos/100">
+                    </div>
+
+                    <div class="about-me-timeline-point">
+                        <div class="about-me-timeline-point-description">
+                            <span class="about-me-timeline-point-description__year about-me-timeline-point-description__year--text">2017</span>
+                            <p class="about-me-timeline-point-description__info about-me-timeline-point-description__info--text">Laborant na Medical University of Vienna</p>
+                        </div>
+
+                        <img src="https://picsum.photos/100">
+                    </div>
+
+                    <div class="about-me-timeline-point">
+                        <div class="about-me-timeline-point-description">
+                            <span class="about-me-timeline-point-description__year about-me-timeline-point-description__year--text">2019</span>
+                            <p class="about-me-timeline-point-description__info about-me-timeline-point-description__info--text">Vědecký pracovník Exbio a.s</p>
+                        </div>
+
+                        <img src="https://picsum.photos/100">
+                    </div>
+
+                    <div class="about-me-timeline-point">
+                        <div class="about-me-timeline-point-description">
+                            <span class="about-me-timeline-point-description__year about-me-timeline-point-description__year--text">2020</span>
+                            <p class="about-me-timeline-point-description__info about-me-timeline-point-description__info--text">Kurz Czechitas HTML&CSS</p>
+                        </div>
+
+                        <img src="https://picsum.photos/100">
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
         <!---PORTFOLIO-->
 
-        <div class="portfolio">
-            <h2 class="portfolio__heading introduction_heading--text">PORTFOLIO</h2>
+        <section>
+            <h2 class="section_heading section_heading--text">PORTFOLIO</h2>
 
-        </div>
+            <div class="portfolio">
+                <p class="portfolio__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque animi odio, ipsa repellendus facere, nisi blanditiis doloremque quo iure cumque voluptatibus itaque sunt veniam quis recusandae nobis exercitationem dolore necessitatibus?</p>
+
+                <img src="https://picsum.photos/150" alt="">
+                <img src="https://picsum.photos/150" alt="">
+                <img src="https://picsum.photos/150" alt="">
+                <img src="https://picsum.photos/150" alt="">
+                <img src="https://picsum.photos/150" alt="">
+            </div>
+        </section>
+
         <!---CONTACT-->
+        <section>
+            <h2 class="section_heading section_heading--text">KONTAKT</h2>
 
-        <div class="contact">
-            <h2 class="contact__heading contact_heading--text">KONTAKT</h2>
-            <div class="contact-info">
+            <div class="contact contact--text">
                 <p class="contact__address contact__address--text">
                     Zcela vymyšlená 3<br>
-                    Praha, 18200</p>
+                    Praha, 18200
+                </p>
+
+                <p class="contact__lorem contact__lorem--text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dolorem expedita esse porro ex! Animi nesciunt blanditiis distinctio, eos, enim error voluptatem ipsum veniam eligendi architecto accusantium nulla rem perferendis.
+                </p>
             </div>
-        </div>
+        </section>
     </div>
 </body>
+
+
+
 
 </html>

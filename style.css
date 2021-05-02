@@ -8,159 +8,358 @@ html {
     box-sizing: inherit;
 }
 
+
 .container {
-    max-width: 1024px;
     margin: auto;
-    box-shadow: 1px 0 5px grey;
+    box-shadow: 1px 0 5px rgb(128, 128, 128);
+    max-width: 1025px;
 }
 
 .container--text {
     font-family: 'Montserrat', sans-serif;
 }
 
+/*---mobil---*/
+
 /*---HEADER---*/
 
-/*---header top---*/
-
-.header-top {
+header {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 0.5rem;
     background-image: linear-gradient(to right, rgba(188, 211, 204, 0), rgba(188, 211, 204, 1));
 }
 
-.header-top__logo--modification {
-    height: 70px;
+.header__logo--modification {
+    height: 20px;
 }
+
 
 .nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-basis: 50%
+    flex-basis: 80%
 }
 
 .nav--text {
-    color: #000000;
+    color: rgb(0, 0, 0);
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 0.7rem;
 }
 
 .nav__items {
     list-style: none;
 }
 
+/*---MAIN INFORMATION---*/
 
-/*---header middle---*/ 
 
-.header-middle {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-}
-
-.header-middle-me {
+.introduction {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    flex-basis: 70%;
 }
 
-.header-middle-me__name--text {
-    font-size: 2.5rem;
+.introduction-me {
+    text-align: center;
 }
 
-.header-midlle-me__job--text {
-    font-size: 2rem;
+.introduction-me__name--text {
+    font-size: 1.2rem;
+}
+
+.introduction-me__job--text {
+    font-size: 1rem;
     font-style: italic;
     margin: 0;
 }
-
-.header-middle__portrait {
-    padding-top: 3rem;
-    padding-right: 5rem;
+.introduction__portrait--modification {
+    width: 100px;
+    border-radius: 50%;
+    justify-self: center;
+    order: -1;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.header-middle__portrait--modification {
-    height: 400px;
-}
 
-/*---header bottom---*/
-
-.header-bottom {
+.contact-icons { 
+    padding-left: 0;
     display: flex;
     list-style: none;
-    padding-left: 1.5rem;
+    margin-top: 2rem;
+    justify-content: space-evenly;
 }
 
-.header-bottom__contact-icons {
-    padding: 0.5rem;
+.contact-icons__button {
+    padding: 0.3rem;
 }
 
-.header-bottom__contact-icons--modification {
-    height: 50px;
+.contact-icons__button--modification {
+    height: 20px;
 }
 
 /*---HEADING---*/
 
-.introduction__heading,
-.portfolio__heading,
-.contact__heading {
+.section_heading {
     padding: 1rem 2rem;
     background-image: linear-gradient(to right, rgba(188, 211, 204, 0), rgba(188, 211, 204, 1));
     text-align: center;
 
 }
 
-.introduction_heading--text,
-.portfolio_heading--text,
-.contact_heading--text  {
-    font-size: 1.5rem;
+.section_heading--text {
+    font-size: 1rem;
     font-weight: bold;
 }
 
-/*---INTRODUCTION---*/
+/*---ABOUT ME---*/
 
+.about-me {
+    margin: 2rem;
+}
 
-.introduction__description {
-    padding: 1rem;
+.about-me__description {
+    margin-bottom: 2rem;
     text-align: center;
 }
 
-.introduction__description--text {
-    font-size: 1rem;
+.about-me__description--text {
+    font-size: 0.8rem;
+}
+
+.about-me-timeline-point {
+    margin-bottom: 2rem;
+}
+
+.about-me-timeline-point-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-me-timeline-point-description__year--text {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.about-me-timeline-point-description__info--text {
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.about-me-timeline-point img {
+    display: none;
 }
 
 /*---PORTFOLIO---*/
 
 
+.portfolio {
+    display: grid;
+    justify-items: center;
+    row-gap: 1.5rem;
+    margin: 2rem;
+    
+}
+
+.portfolio__description {
+    text-align: center;
+}
+
+.nabidka img {
+    place-self: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*---CONTACT---*/
+
+.contact {
+    padding: 1rem;
+    text-align: center;
+}
+
+.contact--text {
+    font-size: 0.8rem;
+}
+
+.contact__address--text {
+    line-height: 1.2rem;
+    font-style: italic;  
+}
+
+
+/*---tablet---*/
+
+@media screen and (min-width: 450px) {
+
+
+/*---HEADER---*/
+
+header {
+    padding: 1rem;    
+}
+
+.header__logo--modification {
+    height: 35px;
+}
+
+.nav--text {
+    font-size: 1rem;
+}
+
+/*---MAIN INFORMATION---*/
+
+.introduction {
+    margin: 2rem;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.introduction-me {
+    padding-right: 0.5rem;
+    flex-basis: 60%;
+    order: -1;
+}
+
+.introduction-me__name--text {
+    font-size: 1.8rem;
+}
+
+.introduction-me__job--text {
+    font-size: 1.5rem;
+}
+
+.introduction__portrait--modification {
+    width: 130px;
+    border-radius: 20px;
+}
+
+.contact-icons {
+    justify-content: start;
+    margin: 2rem;
+}
+
+.contact-icons__button {
+    padding: 0.5rem;
+}
+
+.contact-icons__button--modification {
+    height: 30px;
+}
+
+.header-bottom {
+    margin-top: 2.5rem;
+}
+
+/*---HEADING---*/
+
+.section_heading--text  {
+    font-size: 1.5rem;
+}
+
+/*---ABOUT ME---*/
+
+.about-me__description--text {
+    font-size: 1rem;
+}
+
+.about-me-timeline-point-description__year--text {
+    font-size: 1.2rem;
+}
+
+.about-me-timeline-point-description__info--text {
+    font-size: 1rem;
+}
+
+/*---PORTFOLIO---*/
+
+.portfolio {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    justify-content: center;
+
+}
+
+.portfolio__description {
+    grid-column-end: span 2;
+}
+
 /*---CONTACT---*/
 
 
-.contact__heading {
-    padding: 1rem 2rem;
-    background-image: linear-gradient(to right, rgba(188, 211, 204, 0), rgba(188, 211, 204, 1));
-    text-align: center;
-
-}
-
-.contact_heading--text {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.contact-info {
-    padding: 1rem;
-}
-
-.contact__address {
-    text-align: center;
-    margin: 0;
+.contact--text {
+   font-size: 1rem;
 }
 .contact__address--text {
     line-height: 2rem;
-    font-style: italic;
-    
+
+}
+
+}
+
+/*---PC---*/ 
+
+@media screen and (min-width: 650px) {
+
+/*---HEADER---*/
+
+.header__logo--modification {
+    height: 45px;
+}
+
+.nav--text {
+    font-size: 1.2rem;
+}
+
+/*---MAIN INFORMATION---*/
+
+
+.introduction__portrait--modification {
+    width: 250px;
+    height: 300px;
+}
+
+
+/*---ABOUT ME---*/
+
+.about-me-timeline-point {
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.about-me-timeline-point-description {
+    flex-basis: 50%;
+}
+
+.about-me-timeline-point img {
+    display: block;
+    border-radius: 50%;
+
+}
+
+/*---PORTFOLIO---*/
+
+.portfolio p {
+    grid-column-end: span 3;
+}
+
+.portfolio {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*---CONTACT---*/
+
+.contact {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 400px);
+    justify-content: center;
+}
+
 }
