@@ -1,365 +1,366 @@
+@charset "UTF-8";
 html {
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-
 
 ::after,
 ::before {
-    box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
-
 .container {
-    margin: auto;
-    box-shadow: 1px 0 5px rgb(128, 128, 128);
-    max-width: 1025px;
+  margin: auto;
+  -webkit-box-shadow: 1px 0 5px #808080;
+          box-shadow: 1px 0 5px #808080;
+  max-width: 1025px;
 }
 
 .container--text {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
 }
 
 /*---mobil---*/
-
 /*---HEADER---*/
-
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem;
-    background-image: linear-gradient(to right, rgba(188, 211, 204, 0), rgba(188, 211, 204, 1));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(188, 211, 204, 0)), to(#bcd3cc));
+  background-image: linear-gradient(to right, rgba(188, 211, 204, 0), #bcd3cc);
 }
 
 .header__logo--modification {
-    height: 20px;
+  height: 20px;
 }
-
 
 .nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-basis: 80%
-}
-
-.nav--text {
-    color: rgb(0, 0, 0);
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
 }
 
 .nav__items {
-    list-style: none;
-}
-
-/*---MAIN INFORMATION---*/
-
-
-.introduction {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.introduction-me {
-    text-align: center;
-}
-
-.introduction-me__name--text {
-    font-size: 1.2rem;
-}
-
-.introduction-me__job--text {
-    font-size: 1rem;
-    font-style: italic;
-    margin: 0;
-}
-.introduction__portrait--modification {
-    width: 100px;
-    border-radius: 50%;
-    justify-self: center;
-    order: -1;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-
-.contact-icons { 
-    padding-left: 0;
-    display: flex;
-    list-style: none;
-    margin-top: 2rem;
-    justify-content: space-evenly;
-}
-
-.contact-icons__button {
-    padding: 0.3rem;
-}
-
-.contact-icons__button--modification {
-    height: 20px;
-}
-
-/*---HEADING---*/
-
-.section_heading {
-    padding: 1rem 2rem;
-    background-image: linear-gradient(to right, rgba(188, 211, 204, 0), rgba(188, 211, 204, 1));
-    text-align: center;
-
-}
-
-.section_heading--text {
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-/*---ABOUT ME---*/
-
-.about-me {
-    margin: 2rem;
-}
-
-.about-me__description {
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.about-me__description--text {
-    font-size: 0.8rem;
-}
-
-.about-me-timeline-point {
-    margin-bottom: 2rem;
-}
-
-.about-me-timeline-point-description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.about-me-timeline-point-description__year--text {
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-
-.about-me-timeline-point-description__info--text {
-    font-size: 0.8rem;
-    font-style: italic;
-}
-
-.about-me-timeline-point img {
-    display: none;
-}
-
-/*---PORTFOLIO---*/
-
-
-.portfolio {
-    display: grid;
-    justify-items: center;
-    row-gap: 1.5rem;
-    margin: 2rem;
-    
-}
-
-.portfolio__description {
-    text-align: center;
-}
-
-.nabidka img {
-    place-self: center;
-    width: 100%;
-    height: 100%;
-}
-
-
-/*---CONTACT---*/
-
-.contact {
-    padding: 1rem;
-    text-align: center;
-}
-
-.contact--text {
-    font-size: 0.8rem;
-}
-
-.contact__address--text {
-    line-height: 1.2rem;
-    font-style: italic;  
-}
-
-
-/*---tablet---*/
-
-@media screen and (min-width: 450px) {
-
-
-/*---HEADER---*/
-
-header {
-    padding: 1rem;    
-}
-
-.header__logo--modification {
-    height: 35px;
+  list-style: none;
 }
 
 .nav--text {
-    font-size: 1rem;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: italic;
+  font-size: 0.7rem;
 }
 
 /*---MAIN INFORMATION---*/
-
 .introduction {
-    margin: 2rem;
-    flex-direction: row;
-    justify-content: space-evenly;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .introduction-me {
-    padding-right: 0.5rem;
-    flex-basis: 60%;
-    order: -1;
+  text-align: center;
 }
 
 .introduction-me__name--text {
-    font-size: 1.8rem;
+  font-size: 1.2rem;
 }
 
 .introduction-me__job--text {
-    font-size: 1.5rem;
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0;
 }
 
 .introduction__portrait--modification {
-    width: 130px;
-    border-radius: 20px;
+  width: 100px;
+  border-radius: 50%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .contact-icons {
-    justify-content: start;
-    margin: 2rem;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin-top: 2rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .contact-icons__button {
-    padding: 0.5rem;
+  padding: 0.3rem;
 }
 
 .contact-icons__button--modification {
-    height: 30px;
-}
-
-.header-bottom {
-    margin-top: 2.5rem;
+  height: 20px;
 }
 
 /*---HEADING---*/
+.section_heading {
+  padding: 1rem 2rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(188, 211, 204, 0)), to(#bcd3cc));
+  background-image: linear-gradient(to right, rgba(188, 211, 204, 0), #bcd3cc);
+  text-align: center;
+}
 
-.section_heading--text  {
-    font-size: 1.5rem;
+.section_heading--text {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 /*---ABOUT ME---*/
+.about-me {
+  margin: 2rem;
+}
+
+.about-me__description {
+  margin-bottom: 2rem;
+  text-align: center;
+}
 
 .about-me__description--text {
-    font-size: 1rem;
+  font-size: 0.8rem;
 }
-
-.about-me-timeline-point-description__year--text {
-    font-size: 1.2rem;
-}
-
-.about-me-timeline-point-description__info--text {
-    font-size: 1rem;
-}
-
-/*---PORTFOLIO---*/
-
-.portfolio {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 2rem;
-    justify-content: center;
-
-}
-
-.portfolio__description {
-    grid-column-end: span 2;
-}
-
-/*---CONTACT---*/
-
-
-.contact--text {
-   font-size: 1rem;
-}
-.contact__address--text {
-    line-height: 2rem;
-
-}
-
-}
-
-/*---PC---*/ 
-
-@media screen and (min-width: 650px) {
-
-/*---HEADER---*/
-
-.header__logo--modification {
-    height: 45px;
-}
-
-.nav--text {
-    font-size: 1.2rem;
-}
-
-/*---MAIN INFORMATION---*/
-
-
-.introduction__portrait--modification {
-    width: 250px;
-    height: 300px;
-}
-
-
-/*---ABOUT ME---*/
 
 .about-me-timeline-point {
-    display: flex;
-    justify-content:space-around;
-    align-items:center;
+  margin-bottom: 2rem;
 }
 
 .about-me-timeline-point-description {
-    flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.about-me-timeline-point-description__year--text {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.about-me-timeline-point-description__info--text {
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 .about-me-timeline-point img {
-    display: block;
-    border-radius: 50%;
-
+  display: none;
 }
 
 /*---PORTFOLIO---*/
-
-.portfolio p {
-    grid-column-end: span 3;
+.portfolio {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  row-gap: 1.5rem;
+  margin: 2rem;
 }
 
-.portfolio {
-    grid-template-columns: repeat(3, 1fr);
+.portfolio__description {
+  text-align: center;
+}
+
+.nabidka img {
+  place-self: center;
+  width: 100%;
+  height: 100%;
 }
 
 /*---CONTACT---*/
-
 .contact {
-    display: grid;
-    grid-template-columns: 300px minmax(0, 400px);
-    justify-content: center;
+  padding: 1rem;
+  text-align: center;
 }
 
+.contact--text {
+  font-size: 0.8rem;
 }
+
+.contact__address--text {
+  line-height: 1.2rem;
+  font-style: italic;
+}
+
+/*---tablet---*/
+@media screen and (min-width: 450px) {
+  /*---HEADER---*/
+  header {
+    padding: 1rem;
+  }
+  .header__logo--modification {
+    height: 35px;
+  }
+  .nav--text {
+    font-size: 1rem;
+  }
+  /*---MAIN INFORMATION---*/
+  .introduction {
+    margin: 2rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .introduction-me {
+    padding-right: 0.5rem;
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  /*Zde bych se chtěla zeptat, zda můžu udělat pouze jednokrokové zanoření, tedy &__year--text nebo to musím rozeptat a --text jakožto modifikátor elementu year dát jako další zanoření? Jde mi o to, že vlastnost mám až pro modifikátor elementu ne pro element samotný a pokud bych to musela zanořovat ve dvou krocích bylo by to více řádků než v původní podobě. Snad jsem to napsala als trochu pochopitelně :) děkuji*/
+  .introduction-me__name--text {
+    font-size: 1.8rem;
+  }
+  .introduction-me__job--text {
+    font-size: 1.5rem;
+  }
+  .introduction__portrait--modification {
+    width: 130px;
+    border-radius: 20px;
+  }
+  .contact-icons {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    margin: 2rem;
+  }
+  .contact-icons__button {
+    padding: 0.5rem;
+  }
+  .contact-icons__button--modification {
+    height: 30px;
+  }
+  .header-bottom {
+    margin-top: 2.5rem;
+  }
+  /*---HEADING---*/
+  .section_heading--text {
+    font-size: 1.5rem;
+  }
+  /*---ABOUT ME---*/
+  .about-me__description--text {
+    font-size: 1rem;
+  }
+  .about-me-timeline-point-description__year--text {
+    font-size: 1.2rem;
+  }
+  .about-me-timeline-point-description__info--text {
+    font-size: 1rem;
+  }
+  /*---PORTFOLIO---*/
+  .portfolio {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .portfolio__description {
+    -ms-grid-column-span: 2;
+        grid-column-end: span 2;
+  }
+  /*---CONTACT---*/
+  .contact--text {
+    font-size: 1rem;
+  }
+  .contact__address--text {
+    line-height: 2rem;
+  }
+}
+
+/*---PC---*/
+@media screen and (min-width: 650px) {
+  /*---HEADER---*/
+  .header__logo--modification {
+    height: 45px;
+  }
+  .nav--text {
+    font-size: 1.2rem;
+  }
+  /*---MAIN INFORMATION---*/
+  .introduction__portrait--modification {
+    width: 250px;
+    height: 300px;
+  }
+  /*---ABOUT ME---*/
+  .about-me-timeline-point {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-me-timeline-point img {
+    display: block;
+    border-radius: 50%;
+  }
+  .about-me-timeline-point-description {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  /*---PORTFOLIO---*/
+  .portfolio {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .portfolio p {
+    -ms-grid-column-span: 3;
+        grid-column-end: span 3;
+  }
+  /*---CONTACT---*/
+  .contact {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: 300px minmax(0, 400px);
+        grid-template-columns: 300px minmax(0, 400px);
+  }
+}
+/*# sourceMappingURL=style.css.map */
