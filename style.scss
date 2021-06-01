@@ -1,13 +1,30 @@
+/*---velikosti pisma---*/
+
 $mainFontSize:1rem;
 $bigFontSize:1.2rem;
 $smallFontSize: 0.8rem;
-$mainColor: #000000;
-$mainGradient:linear-gradient(to right, rgba(188, 211, 204, 0), rgba(188, 211, 204, 1));
+
+/*---styl pisma---*/
+
 $highlightingText: uppercase;
-$importantFont: bold;
+$importantFont: 600;
 $nextInformation: italic;
+
+/*---barvy---*/
+
+$mainColor: #000000;
+$mainGradient:linear-gradient(to right, #bcd3cc00, #bcd3cc);
+
+/*---odsazeni---*/
+
 $bigMargin: 2rem;
 $mainPadding: 1rem;
+
+/*---odkazy---*/
+
+$iconBorderStyle: solid 1px #00796B;  
+
+/*---mixin---*/
 
 @mixin flexColumn () {
     display: flex;
@@ -18,6 +35,26 @@ $mainPadding: 1rem;
     display: grid;
     justify-content: center;
 }
+
+
+
+/*---ostatni---*/
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); } }
+
+
+/*------------------------------------------*/
 
 
 html {
@@ -35,6 +72,7 @@ html {
     margin: auto;
     box-shadow: 1px 0 5px #808080;
     max-width: 1025px;
+    
 
     &--text {
         font-family: 'Montserrat', sans-serif;
@@ -43,7 +81,7 @@ html {
 }
 
 
-/*---mobil---*/
+/*-----------------mobil-----------------------*/
 
 /*---HEADER---*/
 
@@ -52,6 +90,7 @@ header {
     justify-content: space-between;
     padding: 0.5rem;
     background-image: $mainGradient;
+    height: 2rem;
 }
 
 .header__logo--modification {
@@ -68,12 +107,23 @@ header {
     &__items {list-style: none;}
 
     &--text { 
-        color: $mainColor;
         text-transform: $highlightingText;
-        font-weight: $nextInformation;
-        font-size: 0.7rem;
+        font-weight: $importantFont;
+        font-size: $smallFontSize;
     }
-}
+
+    a {
+        text-decoration: none;
+        color: $mainColor;
+        padding: 1rem 0.6rem;
+    }
+
+    }
+
+.nav a:hover  {
+        background-color: #ffff;
+        border-radius: 10px;
+    }
 
 
 /*---MAIN INFORMATION---*/
@@ -82,28 +132,29 @@ header {
 .introduction {
     @include flexColumn ();
     align-items: center;
+    justify-content: center;
+
+    &__portrait--modification {
+    max-width: 60%;
+    justify-self: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
 }
 
 .introduction-me {
     text-align: center;
-}
+    margin-top:$bigMargin;
 
-.introduction-me__name--text {
-    font-size: $bigFontSize;
-}
+        &__name--text {
+        font-size: $bigFontSize;
+        }
 
-.introduction-me__job--text {
-    font-size: $mainFontSize;
-    font-style: $nextInformation;
-    margin: 0;
-}
-.introduction__portrait--modification {
-    width: 100px;
-    border-radius: 50%;
-    justify-self: center;
-    order: -1;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+        &__job--text {
+        font-size: $mainFontSize;
+        font-style: $nextInformation;
+        margin: 0;
+        }
 }
 
 
@@ -113,17 +164,19 @@ header {
     list-style: none;
     margin-top: $bigMargin;
     justify-content: space-evenly;
-}
 
-.contact-icons__button {
+    &__button {
     padding: 0.3rem;
-}
-
-.contact-icons__button--modification {
+    }
+    &__button--modification {
     height: 20px;
+    border-radius: 50%;
+    border: $iconBorderStyle;  
+    }
 }
 
-/*---HEADING---*/
+
+/*---HEADING and SECTION---*/
 
 .section_heading {
     padding: $mainPadding 2rem;
@@ -137,11 +190,21 @@ header {
 
 }
 
+section {
+    margin:1.5rem
+}
+
+section:last-child {
+    margin: 0;
+}
+
 
 /*---ABOUT ME---*/
 
 .about-me {
     margin: $bigMargin;
+     @include flexColumn ();
+    align-items: center;
 
     &__description {
         margin-bottom: $bigMargin;
@@ -153,6 +216,12 @@ header {
     }
 }
 
+.about-me__first-animation--modification,
+.about-me__second-animation--modification {
+    max-width: 35%;
+    margin-bottom: $bigMargin;
+}
+
 .about-me-timeline-point {
     margin-bottom: $bigMargin;
 }
@@ -161,64 +230,116 @@ header {
     @include flexColumn ();
     align-items: center;
     text-align: center;
-}
 
-.about-me-timeline-point-description__year--text {
+    &__year--text {
     font-size: 0.9rem;
     font-weight: $importantFont;
-}
+    }
 
-.about-me-timeline-point-description__info--text {
+    &__info--text {
     font-size: $smallFontSize;
     font-style: $nextInformation;
 }
-
-.about-me-timeline-point img {
-    display: none;
 }
 
-/*---PORTFOLIO---*/
+/*---OFFER---*/
 
-
-.portfolio {
-    display: grid;
-    justify-items: center;
-    row-gap: 1.5rem;
-    margin: $bigMargin;
+.section-offer {
+    @include gridCenter ();
+    row-gap: 2rem;
     
     &__description {
+        font-weight: 500;
+        font-size: $mainFontSize;
+        margin-top: $bigMargin;
         text-align: center;
+        margin-bottom: 0;
     }
-}
 
 
-.nabidka {
-        img {
-            place-self: center;
-            width: 100%;
-            height: 100%;
-}
+    img {
+        place-self: center;
+        max-width: 100%;
+    }
+
+    figcaption {
+        color: $mainColor;
+        font-style: $nextInformation;
+        margin-top: 0.8rem;
+        font-size: $smallFontSize;
+        text-align: center;
+
+    }
+
 }
 
 
 /*---CONTACT---*/
 
 .contact {
-    padding: $mainPadding;
-    text-align: center;
+    @include flexColumn (); 
+    align-items: center;
 }
 
-.contact--text {
+.contact-main {
+    @include flexColumn ();
+
+    p {
+        text-align: center;
+        line-height: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px dashed #000000;
+        margin-bottom: 0;
+
+    }
+
+}
+
+.contact-online { 
+    padding-left: 0;
+    @include flexColumn ();
+    list-style: none;
+    align-items: center;
+            
+    &__button--modification {
+            max-width: 30px;
+            margin: {
+                top:$bigMargin;
+                bottom:$bigMargin;
+            }
+            align-items: center;
+            border-radius: 50%;
+            border: $iconBorderStyle;    
+            
+        }
+    
+        a {
+            @include flexColumn ();
+            align-items: center;
+            text-decoration: none;
+            color: $mainColor; 
+            align-items: center;            
+        }
+    }
+       
+
+.contact__animation--modification {
+    max-width: 50%;
+    margin-top: 3rem;
+}
+
+/*---FOOTER---*/
+
+.footer {
     font-size: $smallFontSize;
+    text-align: center;
+    font-weight:$importantFont;
+    margin-top: $bigMargin;
+    padding: 0.5rem;
+    background-image: $mainGradient;
 }
 
-.contact__address--text {
-    line-height: 1.2rem;
-    font-style: $nextInformation;  
-}
-
-
-/*---tablet---*/
+/*-----------------tablet-----------------------*/
 
 @media screen and (min-width: 450px) {
 
@@ -249,21 +370,13 @@ header {
     padding-right: 0.5rem;
     flex-basis: 60%;
     order: -1;
-}
-
-/*Zde bych se chtěla zeptat, zda můžu udělat pouze jednokrokové zanoření, tedy &__year--text nebo to musím rozeptat a --text jakožto modifikátor elementu year dát jako další zanoření? Jde mi o to, že vlastnost mám až pro modifikátor elementu ne pro element samotný a pokud bych to musela zanořovat ve dvou krocích bylo by to více řádků než v původní podobě. Snad jsem to napsala als trochu pochopitelně :) děkuji*/
-
-.introduction-me__name--text {
+    
+    &__name--text {
     font-size: 1.8rem;
 }
-
-.introduction-me__job--text {
+    &__job--text {
     font-size: 1.5rem;
 }
-
-.introduction__portrait--modification {
-    width: 130px;
-    border-radius: 20px;
 }
 
 .contact-icons {
@@ -279,6 +392,11 @@ header {
     }
 }
 
+.introduction__portrait--modification {
+    max-width: 40%;
+    margin-left: 0.5rem;
+}
+
 .header-bottom {
     margin-top: 2.5rem;
 }
@@ -291,43 +409,124 @@ header {
 
 /*---ABOUT ME---*/
 
+
 .about-me__description--text {
     font-size: $mainFontSize;
 }
 
-.about-me-timeline-point-description__year--text {
+.about-me-timeline-point-description {
+
+    &__year--text {
     font-size: $bigFontSize;
 }
 
-.about-me-timeline-point-description__info--text {
+    &__info--text {
     font-size: $mainFontSize;
 }
+}
 
-/*---PORTFOLIO---*/
+/*---OFFER---*/
 
-.portfolio {
+/*---Chtěla bych se zeptat, zda při tom, jak mám napsané HTML je možné nějak udět aby měli obrázky stejnou výšku / šířku? Zkoušela jsem to podle  4. lekce, ale nefunguje mi to :( Děkuji ---*/
+
+.section-offer {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 2rem;
+    column-gap: 2rem;
+    row-gap: 1.5rem;
     justify-content: center;
+    align-items: center;
 
     &__description {
         grid-column-end: span 2;
+        margin-bottom: $bigMargin;
+        margin-top: 3rem;
+
+        &--modification {
+            font-size: 1.3rem;
+        }
     }
 
 }
+
+figure {
+    position: relative;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+
+figure img {
+    max-width: 100%;
+    transition: transform 1s ease; 
+}
+
+figure:hover img {
+    transform: scale(1.2);
+}
+
+/*---Jak můžu nastavit padding u figcaption? Jde mi o to, že když to vyjede, tak ať některý text není úplně nalepený na hranici obrázku. Bude to určitě nějaká prkotina, ale vůbec na to nemůžu přijít :/ Děkuji ! */
+
+figcaption {
+    @include flexColumn;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    background:rgba(0, 0, 0, 1);
+    overflow: hidden;
+ 
+}
+
+figure:hover figcaption {  
+     opacity: 1;
+     background:rgba(0, 0, 0, 0.5);
+     height:100%;    
+     color: #e2e1e1;
+     font-weight: $importantFont;
+     font-size: $bigFontSize;
+}
+
+
+
 
 /*---CONTACT---*/
 
-.contact {
-    &--text {font-size: $mainFontSize;}
-    &__address {
-        &--text {line-height: 2rem;}
-    }
+.contact-main {
+    font-size: $bigFontSize;
+    line-height: 2.5rem;
 }
+
+
+.contact-online__button--modification:hover {
+        transform: scale(1.2);
+        transform: rotate(360deg);
+        transition: 500ms;
+    }  
+
+
+.contact-online__button {
+    font-size: $bigFontSize;
 
 }
 
-/*---PC---*/ 
+.contact__animation--modification:hover {
+    animation: shake 0.5s;
+
+}
+
+/*---FOOTER---*/
+
+.footer {
+    font-size: $mainFontSize;
+}
+
+}
+/*-----------------PC-----------------------*/
 
 @media screen and (min-width: 650px) {
 
@@ -343,46 +542,76 @@ header {
 
 /*---MAIN INFORMATION---*/
 
-
-.introduction__portrait--modification {
-    width: 250px;
-    height: 300px;
+.introduction-me {
+    flex-basis: 40%;
 }
-
-
 /*---ABOUT ME---*/
 
-.about-me-timeline-point {
-    display: flex;
-    justify-content:space-around;
-    align-items:center;
-    
-        img {
-        display: block;
-        border-radius: 50%;
+
+.about-me {
+    &__first-animation--modification {
+    align-self: flex-start;
+    max-width: 30%;
+    margin-top: 0;
     }
+
+    &__second-animation--modification {
+    align-self: flex-end;
+    max-width: 30%;
+}
 }
 
-.about-me-timeline-point-description {
-    flex-basis: 50%;
-}
+/*---OFFER---*/
 
-
-/*---PORTFOLIO---*/
-
-.portfolio {
+.section-offer {
      grid-template-columns: repeat(3, 1fr);
        
-        p {
+       &__description {
         grid-column-end: span 3;
-    }
+        order: -1;
+        align-self: center;
+    }     
 }
+
 
 /*---CONTACT---*/
 
 .contact {
-    @include gridCenter ();
-    grid-template-columns: 300px minmax(0, 400px);
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+
+    &__animation--modification {
+        justify-self: center;
+    }
+
+}
+
+.contact-main {
+    justify-self: center;
+
+    p {
+    border-bottom: none;}
+}
+
+.contact-online {
+    order: 3;
+    grid-column-end: span 2;   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   padding-top: 1rem;
+    border-top: 1px dotted $mainColor;
+
+    li:nth-child(3) { 
+       order:-1;
+    }
+
+    a:nth-child(2) {
+        padding-left: 2rem;
+    }
+
 }
 
 }

@@ -1,4 +1,105 @@
 @charset "UTF-8";
+/*---velikosti pisma---*/
+/*---styl pisma---*/
+/*---barvy---*/
+/*---odsazeni---*/
+/*---odkazy---*/
+/*---mixin---*/
+/*---ostatni---*/
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+            transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+            transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+            transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+            transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(3px, 1px) rotate(-1deg);
+            transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+@keyframes shake {
+  0% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+            transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+            transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+            transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+            transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(3px, 1px) rotate(-1deg);
+            transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+/*------------------------------------------*/
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -22,7 +123,7 @@ html {
   color: #000000;
 }
 
-/*---mobil---*/
+/*-----------------mobil-----------------------*/
 /*---HEADER---*/
 header {
   display: -webkit-box;
@@ -32,8 +133,9 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.5rem;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(188, 211, 204, 0)), to(#bcd3cc));
-  background-image: linear-gradient(to right, rgba(188, 211, 204, 0), #bcd3cc);
+  background-image: -webkit-gradient(linear, left top, right top, from(#bcd3cc00), to(#bcd3cc));
+  background-image: linear-gradient(to right, #bcd3cc00, #bcd3cc);
+  height: 2rem;
 }
 
 .header__logo--modification {
@@ -58,10 +160,20 @@ header {
 }
 
 .nav--text {
-  color: #000000;
   text-transform: uppercase;
-  font-weight: italic;
-  font-size: 0.7rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000000;
+  padding: 1rem 0.6rem;
+}
+
+.nav a:hover {
+  background-color: #ffff;
+  border-radius: 10px;
 }
 
 /*---MAIN INFORMATION---*/
@@ -76,10 +188,22 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.introduction__portrait--modification {
+  max-width: 60%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
 .introduction-me {
   text-align: center;
+  margin-top: 2rem;
 }
 
 .introduction-me__name--text {
@@ -90,18 +214,6 @@ header {
   font-size: 1rem;
   font-style: italic;
   margin: 0;
-}
-
-.introduction__portrait--modification {
-  width: 100px;
-  border-radius: 50%;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
 }
 
 .contact-icons {
@@ -122,24 +234,44 @@ header {
 
 .contact-icons__button--modification {
   height: 20px;
+  border-radius: 50%;
+  border: solid 1px #00796B;
 }
 
-/*---HEADING---*/
+/*---HEADING and SECTION---*/
 .section_heading {
   padding: 1rem 2rem;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(188, 211, 204, 0)), to(#bcd3cc));
-  background-image: linear-gradient(to right, rgba(188, 211, 204, 0), #bcd3cc);
+  background-image: -webkit-gradient(linear, left top, right top, from(#bcd3cc00), to(#bcd3cc));
+  background-image: linear-gradient(to right, #bcd3cc00, #bcd3cc);
   text-align: center;
 }
 
 .section_heading--text {
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
+}
+
+section {
+  margin: 1.5rem;
+}
+
+section:last-child {
+  margin: 0;
 }
 
 /*---ABOUT ME---*/
 .about-me {
   margin: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about-me__description {
@@ -149,6 +281,12 @@ header {
 
 .about-me__description--text {
   font-size: 0.8rem;
+}
+
+.about-me__first-animation--modification,
+.about-me__second-animation--modification {
+  max-width: 35%;
+  margin-bottom: 2rem;
 }
 
 .about-me-timeline-point {
@@ -171,7 +309,7 @@ header {
 
 .about-me-timeline-point-description__year--text {
   font-size: 0.9rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .about-me-timeline-point-description__info--text {
@@ -179,45 +317,128 @@ header {
   font-style: italic;
 }
 
-.about-me-timeline-point img {
-  display: none;
-}
-
-/*---PORTFOLIO---*/
-.portfolio {
+/*---OFFER---*/
+.section-offer {
   display: -ms-grid;
   display: grid;
-  justify-items: center;
-  row-gap: 1.5rem;
-  margin: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 2rem;
 }
 
-.portfolio__description {
+.section-offer__description {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-top: 2rem;
   text-align: center;
+  margin-bottom: 0;
 }
 
-.nabidka img {
+.section-offer img {
   place-self: center;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+}
+
+.section-offer figcaption {
+  color: #000000;
+  font-style: italic;
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 /*---CONTACT---*/
 .contact {
-  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-main p {
   text-align: center;
+  line-height: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px dashed #000000;
+  margin-bottom: 0;
 }
 
-.contact--text {
+.contact-online {
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-online__button--modification {
+  max-width: 30px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  border: solid 1px #00796B;
+}
+
+.contact-online a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #000000;
+  align-items: center;
+}
+
+.contact__animation--modification {
+  max-width: 50%;
+  margin-top: 3rem;
+}
+
+/*---FOOTER---*/
+.footer {
   font-size: 0.8rem;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(#bcd3cc00), to(#bcd3cc));
+  background-image: linear-gradient(to right, #bcd3cc00, #bcd3cc);
 }
 
-.contact__address--text {
-  line-height: 1.2rem;
-  font-style: italic;
-}
-
-/*---tablet---*/
+/*-----------------tablet-----------------------*/
 @media screen and (min-width: 450px) {
   /*---HEADER---*/
   header {
@@ -248,16 +469,11 @@ header {
         -ms-flex-order: -1;
             order: -1;
   }
-  /*Zde bych se chtěla zeptat, zda můžu udělat pouze jednokrokové zanoření, tedy &__year--text nebo to musím rozeptat a --text jakožto modifikátor elementu year dát jako další zanoření? Jde mi o to, že vlastnost mám až pro modifikátor elementu ne pro element samotný a pokud bych to musela zanořovat ve dvou krocích bylo by to více řádků než v původní podobě. Snad jsem to napsala als trochu pochopitelně :) děkuji*/
   .introduction-me__name--text {
     font-size: 1.8rem;
   }
   .introduction-me__job--text {
     font-size: 1.5rem;
-  }
-  .introduction__portrait--modification {
-    width: 130px;
-    border-radius: 20px;
   }
   .contact-icons {
     -webkit-box-pack: start;
@@ -270,6 +486,10 @@ header {
   }
   .contact-icons__button--modification {
     height: 30px;
+  }
+  .introduction__portrait--modification {
+    max-width: 40%;
+    margin-left: 0.5rem;
   }
   .header-bottom {
     margin-top: 2.5rem;
@@ -288,29 +508,105 @@ header {
   .about-me-timeline-point-description__info--text {
     font-size: 1rem;
   }
-  /*---PORTFOLIO---*/
-  .portfolio {
+  /*---OFFER---*/
+  /*---Chtěla bych se zeptat, zda při tom, jak mám napsané HTML je možné nějak udět aby měli obrázky stejnou výšku / šířku? Zkoušela jsem to podle  4. lekce, ale nefunguje mi to :( Děkuji ---*/
+  .section-offer {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    row-gap: 2rem;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+    row-gap: 1.5rem;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .portfolio__description {
+  .section-offer__description {
     -ms-grid-column-span: 2;
         grid-column-end: span 2;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+  }
+  .section-offer__description--modification {
+    font-size: 1.3rem;
+  }
+  figure {
+    position: relative;
+    overflow: hidden;
+    margin: 1rem;
+  }
+  figure img {
+    max-width: 100%;
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+  }
+  figure:hover img {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  /*---Jak můžu nastavit padding u figcaption? Jde mi o to, že když to vyjede, tak ať některý text není úplně nalepený na hranici obrázku. Bude to určitě nějaká prkotina, ale vůbec na to nemůžu přijít :/ Děkuji ! */
+  figcaption {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+    background: black;
+    overflow: hidden;
+  }
+  figure:hover figcaption {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    color: #e2e1e1;
+    font-weight: 600;
+    font-size: 1.2rem;
   }
   /*---CONTACT---*/
-  .contact--text {
-    font-size: 1rem;
+  .contact-main {
+    font-size: 1.2rem;
+    line-height: 2.5rem;
   }
-  .contact__address--text {
-    line-height: 2rem;
+  .contact-online__button--modification:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transition: 500ms;
+    transition: 500ms;
+  }
+  .contact-online__button {
+    font-size: 1.2rem;
+  }
+  .contact__animation--modification:hover {
+    -webkit-animation: shake 0.5s;
+            animation: shake 0.5s;
+  }
+  /*---FOOTER---*/
+  .footer {
+    font-size: 1rem;
   }
 }
 
-/*---PC---*/
+/*-----------------PC-----------------------*/
 @media screen and (min-width: 650px) {
   /*---HEADER---*/
   .header__logo--modification {
@@ -320,47 +616,82 @@ header {
     font-size: 1.2rem;
   }
   /*---MAIN INFORMATION---*/
-  .introduction__portrait--modification {
-    width: 250px;
-    height: 300px;
+  .introduction-me {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
   }
   /*---ABOUT ME---*/
-  .about-me-timeline-point {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .about-me__first-animation--modification {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    max-width: 30%;
+    margin-top: 0;
   }
-  .about-me-timeline-point img {
-    display: block;
-    border-radius: 50%;
+  .about-me__second-animation--modification {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    max-width: 30%;
   }
-  .about-me-timeline-point-description {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-  /*---PORTFOLIO---*/
-  .portfolio {
+  /*---OFFER---*/
+  .section-offer {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
-  .portfolio p {
+  .section-offer__description {
     -ms-grid-column-span: 3;
         grid-column-end: span 3;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   /*---CONTACT---*/
   .contact {
+    margin-top: 4rem;
     display: -ms-grid;
     display: grid;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-grid-columns: 300px minmax(0, 400px);
-        grid-template-columns: 300px minmax(0, 400px);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+  }
+  .contact__animation--modification {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .contact-main {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .contact-main p {
+    border-bottom: none;
+  }
+  .contact-online {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    -ms-grid-column-span: 2;
+        grid-column-end: span 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-top: 1rem;
+    border-top: 1px dotted #000000;
+  }
+  .contact-online li:nth-child(3) {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .contact-online a:nth-child(2) {
+    padding-left: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
