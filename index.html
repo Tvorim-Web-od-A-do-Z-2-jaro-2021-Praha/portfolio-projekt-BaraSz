@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Bara Szarowska</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,9 +24,15 @@
             <img src="pictures/logo_bez_pozadi.png" alt="logo Bara Szarowska" class="header__logo--modification">
 
             <nav class="nav nav--text">
-                <li class="nav__items">Portfolio</li>
-                <li class="nav__items">O mě</li>
-                <li class="nav__items">Kontakt</li>
+                <li class="nav__items">
+                    <a href="#about-me">O mě</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#offer">Nabídka</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#contact">Kontakt</a>
+                </li>
             </nav>
         </header>
 
@@ -39,20 +45,22 @@
                 <span class="introduction-me__job--text">- Kóderka -</span>
             </div>
 
-            <img src="https://picsum.photos/200/200" alt="Portret Bara Szarowska" class="introduction__portrait introduction__portrait--modification">
+            <img src="vektorove obrazky/undraw_web_development_w2vv.svg" alt="web developer" class="introduction__portrait introduction__portrait--modification">
         </div>
 
         <ul class="contact-icons">
             <li class="contact-icons__button">
-                <img src="pictures/mail.jpg" alt="odkaz_email" class="contact-icons__button--modification">
+                <a href="mailto:szarowska.b@gmail.com"><img src="vektorove obrazky/iconfinder_email_1055066.svg" alt="odkaz_email" class="contact-icons__button--modification"></a>
             </li>
 
             <li class="contact-icons__button">
-                <img src="pictures/linkedin.jpg" alt="odkaz_linkedin" class="contact-icons__button--modification">
+                <a href="https://www.linkedin.com/in/b%C3%A1ra-szarowsk%C3%A1-8a65bb166/" target="_blank"><img src="vektorove obrazky/iconfinder_linked_in_online_social_media_734393.svg" alt="odkaz_linkedin" class="contact-icons__button--modification"></a>
+
 
             </li>
             <li class="contact-icons__button">
-                <img src="pictures/fb.jpg" alt="odkaz_facebook" class="contact-icons__button--modification">
+                <a href="https://www.facebook.com/bara.szarowska" target="_blank"><img src="vektorove obrazky/iconfinder_facebook_834722.svg" alt="odkaz_facebook" class="contact-icons__button--modification"></a>
+
             </li>
         </ul>
 
@@ -61,12 +69,11 @@
         <!---ABOUT ME-->
 
 
+        <h2 class="section_heading section_heading--text">O MĚ</h2>
+        <section id="about-me">
 
-        <section>
-            <h2 class="section_heading section_heading--text">O MĚ</h2>
             <div class="about-me">
-
-                <p class="about-me__description about-me__description--text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero modi sequi debitis beatae temporibus maiores nihil rerum delectus incidunt totam provident ipsam laborum, ipsa illo qui numquam quis, officiis iusto.</p>
+                <img src="vektorove obrazky/undraw_alien_science_nonm.svg" alt="animace vědkyně" class="about-me__first-animation--modification">
 
                 <div class="about-me-timeline">
                     <div class="about-me-timeline-point">
@@ -75,7 +82,6 @@
                             <p class="about-me-timeline-point_info about-me-timeline-point-description__info--text">Ukončení studia v Brně</p>
                         </div>
 
-                        <img src="https://picsum.photos/100">
                     </div>
 
                     <div class="about-me-timeline-point">
@@ -84,7 +90,7 @@
                             <p class="about-me-timeline-point-description__info about-me-timeline-point-description__info--text">Stáž na Institut Karolinska</p>
                         </div>
 
-                        <img src="https://picsum.photos/100">
+
                     </div>
 
                     <div class="about-me-timeline-point">
@@ -93,7 +99,7 @@
                             <p class="about-me-timeline-point-description__info about-me-timeline-point-description__info--text">Laborant na Medical University of Vienna</p>
                         </div>
 
-                        <img src="https://picsum.photos/100">
+
                     </div>
 
                     <div class="about-me-timeline-point">
@@ -102,7 +108,7 @@
                             <p class="about-me-timeline-point-description__info about-me-timeline-point-description__info--text">Vědecký pracovník Exbio a.s</p>
                         </div>
 
-                        <img src="https://picsum.photos/100">
+
                     </div>
 
                     <div class="about-me-timeline-point">
@@ -111,43 +117,81 @@
                             <p class="about-me-timeline-point-description__info about-me-timeline-point-description__info--text">Kurz Czechitas HTML&CSS</p>
                         </div>
 
-                        <img src="https://picsum.photos/100">
                     </div>
 
                 </div>
+                <img src="vektorove obrazky/undraw_app_data_re_vg5c.svg" alt="animace programátorky" class="about-me__second-animation--modification">
             </div>
         </section>
 
-        <!---PORTFOLIO-->
+        <!---OFFER-->
+        <h2 class="section_heading section_heading--text">NABÍDKA</h2>
+        <section id="offer" class="section-offer">
 
-        <section>
-            <h2 class="section_heading section_heading--text">PORTFOLIO</h2>
+            <p class="section-offer__description section-offer__description--modification">
+                -&nbspTvorba webových stánek na míru&nbsp-
+            </p>
+            <figure>
+                <img src="pictures/kavarna.jpg" alt="Obrázek kavárny">
+                <figcaption>Otevíráte kavárnu?</figcaption>
+            </figure>
 
-            <div class="portfolio">
-                <p class="portfolio__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque animi odio, ipsa repellendus facere, nisi blanditiis doloremque quo iure cumque voluptatibus itaque sunt veniam quis recusandae nobis exercitationem dolore necessitatibus?</p>
+            <figure>
+                <img src="pictures/kadeřnice.jpg" alt="obrázek kadeřnice">
+                <figcaption>Chcete dát o sobě vědět?</figcaption>
+            </figure>
 
-                <img src="https://picsum.photos/150" alt="">
-                <img src="https://picsum.photos/150" alt="">
-                <img src="https://picsum.photos/150" alt="">
-                <img src="https://picsum.photos/150" alt="">
-                <img src="https://picsum.photos/150" alt="">
-            </div>
+            <figure>
+                <img src="pictures/portfolio.png" alt="Obrázek portfolia">
+                <figcaption>Potřebujete online portfolio?</figcaption>
+            </figure>
+
+            <figure>
+                <img src="pictures/svatba.jpg" alt="Obrázek nevěsty a ženicha">
+                <figcaption>Plánujete svatbu?</figcaption>
+            </figure>
+
+            <figure>
+                <img src="pictures/cestování.jpg" alt="Obrázek cestování">
+                <figcaption>Máte obsah, ale ne formu?</figcaption>
+            </figure>
         </section>
 
         <!---CONTACT-->
-        <section>
-            <h2 class="section_heading section_heading--text">KONTAKT</h2>
+        <h2 class="section_heading section_heading--text">KONTAKT</h2>
+        <section id="contact" class="contact">
 
-            <div class="contact contact--text">
-                <p class="contact__address contact__address--text">
-                    Zcela vymyšlená 3<br>
-                    Praha, 18200
-                </p>
 
-                <p class="contact__lorem contact__lorem--text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dolorem expedita esse porro ex! Animi nesciunt blanditiis distinctio, eos, enim error voluptatem ipsum veniam eligendi architecto accusantium nulla rem perferendis.
+            <div class="contact-main">
+                <p> Bára Szarowská<br>
+                    Hořínecká 953/14<br>
+                    182 00 Praha <br>
+
+                    <strong> tel: 420733541598</strong>
                 </p>
             </div>
+            <ul class="contact-online">
+                <li class="contact-online__button">
+
+                    <a href="mailto:szarowska.b@gmail.com"><img src="vektorove obrazky/iconfinder_email_1055066.svg" alt="odkaz_email" class="contact-online__button--modification">szarowska.b@gmail.com</a>
+                </li>
+
+                <li class="contact-online__button">
+
+                    <a href="https://www.linkedin.com/in/b%C3%A1ra-szarowsk%C3%A1-8a65bb166/" target="_blank"><img src="vektorove obrazky/iconfinder_linked_in_online_social_media_734393.svg" alt="odkaz_linkedin" class="contact-online__button--modification">linkedin</a>
+
+                </li>
+                <li class="contact-online__button">
+
+                    <a href="https://www.facebook.com/bara.szarowska" target="_blank"><img src="vektorove obrazky/iconfinder_facebook_834722.svg" alt="odkaz_facebook" class="contact-online__button--modification">facebook</a>
+                </li>
+
+            </ul>
+            <img src="vektorove obrazky/undraw_quick_chat_re_bit5.svg" alt="animace ptáček s bublinou" class="contact__animation--modification">
+        </section>
+
+        <section class="footer">
+            <p> Praha 2021</p>
         </section>
     </div>
 </body>
